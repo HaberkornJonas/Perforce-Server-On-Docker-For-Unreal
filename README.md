@@ -1,4 +1,9 @@
-# Perforce Server
+# Perforce Server for Unreal in a Docker container
+
+Author: Jonas Haberkorn
+Sources: See the chapter below
+Description: Setting up a perforce server in a docker container that is already configured for Unreal projects.
+
 
 ## Run
 
@@ -21,6 +26,11 @@ Then do the following in the Dockerfile:
 
 ## Sources
 
-This is based on the work of ambakshi on his repo [docker-perforce](https://github.com/ambakshi/docker-perforce/tree/master/perforce-server)  
+This is based on the work of ambakshi on his repo [docker-perforce](https://github.com/ambakshi/docker-perforce)  
 It is also based on the changes described by Froyok in his repo [froyok-perforce](https://github.com/Froyok/froyok-perforce) and documented in his [article](https://www.froyok.fr/blog/2018-09-setting-up-perforce-with-docker-for-unreal-engine-4/page.html)
 
+## Disclaimer
+
+I decline any responsibility in case of data loss or in case of a difficult (or even impossible) maintenance if you use this solution.  
+I did this as a hobby for a small project with frieds, nothing serious or professional.  
+If you still want to use it for your project, I would suggest you to setup or do regularly backups of your project.  

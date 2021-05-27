@@ -1,4 +1,4 @@
-ARG P4_BASEIMAGE=centos:7
+ARG P4_BASEIMAGE=centos:8
 FROM $P4_BASEIMAGE AS perforce-base
 MAINTAINER Jonas Haberkorn
 
@@ -26,10 +26,9 @@ ARG TINI_VERSION=0.18.0
 ARG SYSTEMCTL_GITSHA1=73b5aff2ba6abfd254d236f1df22ff4971d44660
 
 
-# Update the perforce repo url with the right version (currently using centos 7 so we have '.../rhel/7/x86_64')
+# Update the perforce repo url with the right version (currently using centos 8 so we have '.../rhel/8/x86_64')
 # You can find the index of all packages at: https://package.perforce.com/yum/
-RUN sed -ir '/\[updates\].*/a enabled=1' /etc/yum.repos.d/CentOS-Base.repo && \
-    yum install -y epel-release cronie-anacron tar gzip curl openssl which sudo initscripts sysvinit at && \
+RUN yum install -y epel-release cronie-anacron tar gzip curl openssl which sudo initscripts at && \
     rpm --import https://package.perforce.com/perforce.pubkey && \
     echo -ne '[perforce]\nname=Perforce\nbaseurl=http://package.perforce.com/yum/rhel/8/x86_64\nenabled=1\ngpgcheck=1\n' > /etc/yum.repos.d/perforce.repo && \
     yum clean all --enablerepo='*' && \
