@@ -29,6 +29,12 @@ Then do the following in the Dockerfile:
 This is based on the work of ambakshi on his repo [docker-perforce](https://github.com/ambakshi/docker-perforce)  
 It is also based on the changes described by Froyok in his repo [froyok-perforce](https://github.com/Froyok/froyok-perforce) and documented in his [article](https://www.froyok.fr/blog/2018-09-setting-up-perforce-with-docker-for-unreal-engine-4/page.html)
 
+
+## Next steps
+
+* Search how to and add instructions on how to mount a volume to persist data
+* Document how to configure the server, how to create users, how to connect to it
+
 ## Disclaimer
 
 I decline any responsibility in case of data loss or in case of a difficult (or even impossible) maintenance if you use this solution.  
