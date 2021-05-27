@@ -1,8 +1,8 @@
 # Perforce Server for Unreal in a Docker container
 
-Author: Jonas Haberkorn
-Sources: See the chapter below
-Description: Setting up a perforce server in a docker container that is already configured for Unreal projects.
+**Author:** Jonas Haberkorn  
+**Sources:** See the chapter below  
+**Description:** Setting up a perforce server in a docker container that is already configured for Unreal projects.  
 
 
 ## Run
