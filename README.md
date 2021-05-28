@@ -20,7 +20,7 @@ You can now dowload the [P4Admin tool](https://www.perforce.com/downloads/admini
 
 And then download a client like the [P4V tool](https://www.perforce.com/downloads/helix-visual-client-p4v) if you want the visual one.  
 
-You can connect to the server on `ssl:<host_ip_or_name>:1666`
+You can connect to the server on `ssl:<host_ip_or_name>:1666` (you might need to remove the 'ssl:' part in some situations)
 
 ## Update perforce version
 
