@@ -7,14 +7,20 @@
 
 ## Run
 
-To setup the server, you'll need an x86_64 computer with [docker installed](https://docs.docker.com/get-docker/), then run  
+To setup the server, you'll need an x86_64 computer with [docker installed](https://docs.docker.com/get-docker/), then run the following commands (replace <your_admin_password> with the desired/needed admin password)  
 
-```shell
+```bash
     docker build --target perforce-server . -t perforce-server:latest --no-cache
-    docker run -d -v /data/perforce:/data -p 8080:8080 -p 1666:1666 -h perforce --name perforce perforce-server 
+    docker run -d -e P4PASSWD='<your_admin_password>' -v /data/perforce:/data -p 8080:8080 -p 1666:1666 -h perforce --name perforce perforce-server 
 ```  
 
 This will build the image and start a container. The data stored by the perforce server ill be mounted in the /data/perforce directory on your host (you might want to change this path depdending on your preferencies and your operating system).  
+
+You can now dowload the [P4Admin tool](https://www.perforce.com/downloads/administration-tool) to configure your server and create your users accounts.  
+
+And then download a client like the [P4V tool](https://www.perforce.com/downloads/helix-visual-client-p4v) if you want the visual one.  
+
+You can connect to the server on `ssl:<host_ip_or_name>:1666`
 
 ## Update perforce version
 
@@ -31,10 +37,6 @@ Then do the following in the Dockerfile:
 This is based on the work of ambakshi on his repo [docker-perforce](https://github.com/ambakshi/docker-perforce).  
 It is also based on the changes described by Froyok in his repo [froyok-perforce](https://github.com/Froyok/froyok-perforce) and documented in his [article](https://www.froyok.fr/blog/2018-09-setting-up-perforce-with-docker-for-unreal-engine-4/page.html).
 
-
-## Next steps
-
-* Document how to configure the server, how to create users, how to connect to it
 
 ## Disclaimer
 
